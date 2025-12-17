@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Himpunan</title>
+    <link rel="stylesheet" href="/styles/kalkulator.css">
+</head>
+<body>
+
+    <div id="navbar">Kelompok 2</div>
+
+    <nav>
+        <ul>
+            <li><a href="/index.html">beranda</a></li>
+            <li><a href="/pages/materi.html">Materi</a></li>
+            <li><a href="/pages/evaluasi.html">Evaluasi</a></li>
+            <li><a href="/pages/video_penjelasan.html">Video Penjelasan</a></li>
+            <li><a href="/pages/kalkulator.html">Kalkulator</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div id="header">kalkulator himpunan</div>
+    </div>
+    
+    <div class="calc-container">
+
+    <label>Pilih Materi:</label>
+    <select id="materiSelect" onchange="hitung()">
+        <option value="">-- Pilih operasi --</option>
+        <option value="pengantar">Pengantar Himpunan</option>
+        <option value="representasi">Representasi Himpunan</option>
+        <option value="kardinalitas">Kardinalitas Himpunan</option>
+        <option value="jenis">Jenis Himpunan</option>
+        <option value="operasi">Operasi Himpunan</option>
+    </select>
+
+    <label>Himpunan A:</label>
+    <input type="text" id="setA" placeholder="contoh: 1,2,3">
+
+    <label>Himpunan B:</label>
+    <input type="text" id="setB" placeholder="contoh: 2,3,4">
+
+    <table class="calc-table">
+        <thead>
+            <tr>
+                <th>Keterangan</th>
+                <th>Hasil</th>
+            </tr> 
+        </thead>
+        <tbody id="outputTable">
+            <tr>
+                <td colspan="2" style="text-align:center;">Pilih materi untuk melihat hasil</td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+
+<a href="/index.html" class="back-btn">← Kembali</a>
+
+    <footer>&copy;2022 Kalkulator himpunan</footer>
+
+<script src="/scripts/js.kalkulator.js"></script>
+    <script src="/scripts/animasi.js"></script>
+
+
+</body>
+</head>

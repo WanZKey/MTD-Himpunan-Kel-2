@@ -1,0 +1,219 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #dce6ff, #f4f7ff);
+}
+
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 4px 25px rgba(0,0,0,0.1);
+}
+
+#navbar {
+    background: #1809eb;
+    padding: 16px 10px;
+    font-size: 25px;
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    color: white;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background: transparent;
+}
+
+nav ul {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    padding: 12px 0;
+    margin: 0;
+}
+
+nav ul li {
+    background: #FFFFFF;
+    padding: 8px 15px;
+    border-radius: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+nav ul li:hover {
+    background: #8489C4;
+    color: white;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#header {
+    text-align: center;
+    padding: 25px 10px;
+    font-size: 26px;
+    color: #553C8B;
+    font-weight: bold;
+}
+
+.materi-section {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 10px;
+}
+
+.materi-card {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    animation: fadeUp .7s ease forwards;
+    opacity: 0;
+    border-left: 6px solid #1809eb;
+}
+
+.materi-card h2 {
+    color: #1809eb;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.materi-card p {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 15px auto;
+    line-height: 1.6;
+}
+
+.materi-card:nth-child(1) { animation-delay: .1s; }
+.materi-card:nth-child(2) { animation-delay: .2s; }
+.materi-card:nth-child(3) { animation-delay: .3s; }
+.materi-card:nth-child(4) { animation-delay: .4s; }
+.materi-card:nth-child(5) { animation-delay: .5s; }
+
+.video-box {
+    margin-top: 15px;
+    position: relative;
+    border-radius: 14px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .4s ease;
+}
+
+.video-box img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 14px;
+    transition: .4s ease;
+}
+
+.video-box:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 25px rgba(24, 9, 235, 0.25);
+}
+
+.video-box:hover img {
+    filter: brightness(1.14);
+}
+
+.play-btn {
+    position: absolute;
+    width: 65px;
+    height: 65px;
+    background: rgba(24, 9, 235, 0.85);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    transition: .3s ease;
+    animation: pulse 1.6s infinite ease-out;
+}
+
+.play-btn::after {
+    content: "";
+    position: absolute;
+    left: 25px;
+    top: 18px;
+    border-left: 20px solid white;
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+}
+
+@keyframes pulse {
+    0% { transform: translate(-50%, -50%) scale(1); }
+    50% { transform: translate(-50%, -50%) scale(1.13); }
+    100% { transform: translate(-50%, -50%) scale(1); }
+}
+
+@keyframes fadeUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+footer {
+    background: #1809eb;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all .8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reveal-left {
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: all .8s ease;
+}
+
+.reveal-left.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.reveal-right {
+    opacity: 0;
+    transform: translateX(40px);
+    transition: all .8s ease;
+}
+
+.reveal-right.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.reveal-scale {
+    opacity: 0;
+    transform: scale(0.85);
+    transition: all .8s ease;
+}
+
+.reveal-scale.active {
+    opacity: 1;
+    transform: scale(1);
+}

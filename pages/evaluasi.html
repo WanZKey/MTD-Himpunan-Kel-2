@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar Ngoding Dasar</title>
+    <link rel="stylesheet" href="/styles/kuis.css">
+</head>
+<body>
+
+    <div id="navbar">Kelompok 2</div>
+
+    <nav>
+        <ul>
+            <li><a href="/index.html">beranda</a></li>
+            <li><a href="/pages/materi.html">Materi</a></li>
+            <li><a href="/pages/evaluasi.html">Evaluasi</a></li>
+            <li><a href="/pages/video_penjelasan.html">Video Penjelasan</a></li>
+            <li><a href="/pages/kalkulator.html">Kalkulator</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+
+    <div id="header">kuis himpunan pilihan Ganda</div>
+    </div>
+
+    <div class="container">
+    <h2>Kuis Matematika Pilihan Ganda</h2>
+    
+    <form id="quizForm">
+        <!-- 1 -->
+        <div class="question">
+            1. Hasil dari 7 × 8 adalah?
+            <div class="options">
+                <label><input type="radio" name="q1" value="A"> 48</label>
+                <label><input type="radio" name="q1" value="B"> 54</label>
+                <label><input type="radio" name="q1" value="C"> 56</label>
+                <label><input type="radio" name="q1" value="D"> 64</label>
+            </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="question">
+            2. Hasil dari 12 + 15 adalah?
+            <div class="options">
+                <label><input type="radio" name="q2" value="A"> 25</label>
+                <label><input type="radio" name="q2" value="B"> 26</label>
+                <label><input type="radio" name="q2" value="C"> 27</label>
+                <label><input type="radio" name="q2" value="D"> 30</label>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="question">
+            3.  √81  = ?
+            <div class="options">
+                <label><input type="radio" name="q3" value="A"> 8</label>
+                <label><input type="radio" name="q3" value="B"> 9</label>
+                <label><input type="radio" name="q3" value="C"> 10</label>
+                <label><input type="radio" name="q3" value="D"> 12</label>
+            </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="question">
+            4. Bilangan prima terkecil adalah?
+            <div class="options">
+                <label><input type="radio" name="q4" value="A"> 0</label>
+                <label><input type="radio" name="q4" value="B"> 1</label>
+                <label><input type="radio" name="q4" value="C"> 2</label>
+                <label><input type="radio" name="q4" value="D"> 3</label>
+            </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="question">
+            5. 10² = ?
+            <div class="options">
+                <label><input type="radio" name="q5" value="A"> 20</label>
+                <label><input type="radio" name="q5" value="B"> 50</label>
+                <label><input type="radio" name="q5" value="C"> 100</label>
+                <label><input type="radio" name="q5" value="D"> 1000</label>
+            </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="question">
+            6. Hasil dari 45 ÷ 5 adalah?
+            <div class="options">
+                <label><input type="radio" name="q6" value="A"> 7</label>
+                <label><input type="radio" name="q6" value="B"> 8</label>
+                <label><input type="radio" name="q6" value="C"> 9</label>
+                <label><input type="radio" name="q6" value="D"> 10</label>
+            </div>
+        </div>
+
+        <!-- 7 -->
+        <div class="question">
+            7. Himpunan bilangan ganjil di bawah ini adalah…
+            <div class="options">
+                <label><input type="radio" name="q7" value="A"> 2, 4, 6, 8</label>
+                <label><input type="radio" name="q7" value="B"> 1, 3, 5, 7</label>
+                <label><input type="radio" name="q7" value="C"> 0, 2, 4, 6</label>
+                <label><input type="radio" name="q7" value="D"> 3, 6, 9, 12</label>
+            </div>
+        </div>
+
+        <!-- 8 -->
+        <div class="question">
+            8. Rumus luas segitiga adalah…
+            <div class="options">
+                <label><input type="radio" name="q8" value="A"> a × t</label>
+                <label><input type="radio" name="q8" value="B"> ½ × a × t</label>
+                <label><input type="radio" name="q8" value="C"> a + t</label>
+                <label><input type="radio" name="q8" value="D"> a ÷ t</label>
+            </div>
+        </div>
+
+        <!-- 9 -->
+        <div class="question">
+            9. Jika x = 5, maka 3x + 2 = ?
+            <div class="options">
+                <label><input type="radio" name="q9" value="A"> 12</label>
+                <label><input type="radio" name="q9" value="B"> 15</label>
+                <label><input type="radio" name="q9" value="C"> 17</label>
+                <label><input type="radio" name="q9" value="D"> 20</label>
+            </div>
+        </div>
+
+        <!-- 10 -->
+        <div class="question">
+            10. Pecahan 1/2 sama dengan…
+            <div class="options">
+                <label><input type="radio" name="q10" value="A"> 0.2</label>
+                <label><input type="radio" name="q10" value="B"> 0.3</label>
+                <label><input type="radio" name="q10" value="C"> 0.5</label>
+                <label><input type="radio" name="q10" value="D"> 0.7</label>
+            </div>
+        </div>
+
+        <button id="submit-btn" type="button" onclick="checkAnswers()">Kirim Jawaban</button>
+    </form>
+
+    <div id="result"></div>
+
+    <a href="/index.html" class="back-btn">← Kembali</a>
+
+</div>
+
+    <footer>&copy;2022 Kalkulator himpunan</footer>
+
+<script src="/scripts/evaluasi.js"></script>
+
+</body>
+</head>
