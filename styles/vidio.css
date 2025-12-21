@@ -7,6 +7,34 @@ body {
     font-family: Arial, sans-serif;
     background: linear-gradient(to bottom, #dce6ff, #f4f7ff);
 }
+.video-container {
+    position: relative;
+    width: 80%; /* Ubah sesuai kebutuhan: 70%, 80%, 90% */
+    max-width: 900px; /* Maksimal lebar video */
+    margin: 30px auto; /* Auto margin untuk center horizontal */
+    padding-bottom: 45%; /* 16:9 ratio disesuaikan dengan width 80% (80% × 56.25% = 45%) */
+    height: 0;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Responsive untuk mobile */
+@media (max-width: 768px) {
+    .video-container {
+        width: 95%;
+        padding-bottom: 53.44%; /* 95% × 56.25% */
+    }
+}
 
 .container {
     max-width: 900px;
@@ -217,3 +245,4 @@ footer {
     opacity: 1;
     transform: scale(1);
 }
+
